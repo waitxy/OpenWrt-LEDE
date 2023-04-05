@@ -7,8 +7,8 @@ on:
 
 env:
   OWRT_TARGET: X86  #项目平台
-  OWRT_NAME: OWRT  #默认主机名
-  OWRT_IP: 192.168.2.1  #默认IP地址
+  OWRT_NAME: waitxy  #默认主机名
+  OWRT_IP: 10.0.0.1  #默认IP地址
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
   LEDE_URL: https://github.com/coolsnowwolf/lede.git
   LIST_URL: https://raw.githubusercontent.com/VIKINGYFY/OpenWRT-LEDE/main/Depends.txt
