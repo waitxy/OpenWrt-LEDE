@@ -24,9 +24,9 @@ CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-store=y
-CONFIG_PACKAGE_luci-app-alist=y
-CONFIG_PACKAGE_luci-i18n-alist-zh-cn=y
-CONFIG_PACKAGE_alist-aarch64-cortex-a53=y
+#CONFIG_PACKAGE_luci-app-alist=y
+#CONFIG_PACKAGE_luci-i18n-alist-zh-cn=y
+#CONFIG_PACKAGE_alist-aarch64-cortex-a53=y
 #删除插件
 CONFIG_PACKAGE_luci-app-wol=n
 CONFIG_DEFAULT_luci-app-upnp=n
