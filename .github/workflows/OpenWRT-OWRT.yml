@@ -81,14 +81,14 @@ jobs:
         run: |
           git clone --depth=1 --single-branch $LEDE_URL
 
-      - name: Update Feeds
+      - name: 更新 Feeds
         run: |
           cd ./lede
 
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Custom Scripts
+      - name: 自定义脚本
         run: |
           cd ./lede
           $GITHUB_WORKSPACE/Scripts/Settings.sh
@@ -96,7 +96,7 @@ jobs:
           cd ./package
           $GITHUB_WORKSPACE/Scripts/Plugins.sh
 
-      - name: Custom Settings
+      - name: 自定义设置
         run: |
           cd ./lede
 
@@ -105,7 +105,7 @@ jobs:
 
           make defconfig
      
-      - name: Download Packages
+      - name: 下载软件包
         run: |
           cd ./lede
 
