@@ -1,5 +1,6 @@
 #!/bin/bash
-
+#Alist
+#git clone --depth=1 --single-branch https://github.com/sbwml/luci-app-alist.git
 #luci-app-store
 git clone --depth=1 --single-branch https://github.com/linkease/istore.git
 #Design Theme
