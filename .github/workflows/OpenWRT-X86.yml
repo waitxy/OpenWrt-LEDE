@@ -17,7 +17,7 @@ permissions: write-all
 
 jobs:
   build_openwrt:
-    name: Build Firmware
+    name: 构建固件
     runs-on: ubuntu-latest
     steps:
       - name: Initialization Environment
@@ -36,7 +36,7 @@ jobs:
           sudo -E systemctl daemon-reload
           sudo -E timedatectl set-timezone "Asia/Shanghai"
 
-      - name: Check Server Performance
+      - name: 检查服务器性能
         run: |
           echo "警告⚠"
           echo "分配的服务器性能有限，若选择的插件过多，务必注意CPU性能！"
@@ -49,17 +49,17 @@ jobs:
           echo -e "$(sudo lshw -short -C memory | grep GiB) \n"
           echo "--------------------------硬盘信息--------------------------"
           echo "硬盘数量：$(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT
-      - name: Check Projects
+      - name: 检查项目
         uses: actions/checkout@v3
 
-      - name: Check Scripts
+      - name: 检查脚本
         run: |
           cd ./Scripts
 
           chmod +x ./*.sh
           dos2unix ./*.sh
 
-      - name: Clone LEDE Code
+      - name: 克隆 LEDE Code
         run: |
           git clone --depth=1 --single-branch $LEDE_URL
 
@@ -93,7 +93,7 @@ jobs:
 
           make download -j$(nproc)
 
-      - name: Compile Firmware
+      - name: 编译固件
         run: |
           cd ./lede
 
@@ -107,7 +107,7 @@ jobs:
           du -h --max-depth=1 ./bin
           echo "======================="
 
-      - name: Package Firmware
+      - name: 打包固件
         run: |
           export OWRT_TYPE=$(sed -n "1{s/^#//;s/\r$//;p;q}" $GITHUB_WORKSPACE/Config/$OWRT_TARGET.txt)
           export OWRT_DATE=$(TZ=UTC-8 date +"%y.%m.%d_%H.%M.%S")
@@ -124,7 +124,7 @@ jobs:
           cd ./upload
           $GITHUB_WORKSPACE/Scripts/Renames.sh
 
-      - name: Release Firmware
+      - name: 发布固件
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{env.OWRT_TARGET}}_OWRT_${{env.OWRT_DATE}}
@@ -142,7 +142,7 @@ jobs:
           keep_latest: 4
           delete_tags: true
 
-      - name: Delete Old Workflows
+      - name: 删除旧工作流
         uses: Mattraks/delete-workflow-runs@v2
         with:
           retain_days: 1
