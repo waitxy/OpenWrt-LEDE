@@ -15,13 +15,13 @@ on:
       name:
         description: 输入主机名字
         required: true
-        default: 'OWRT'
+        default: 'waitxy'
         type: string
 
       address:
         description: 输入登陆地址
         required: true
-        default: '192.168.2.1'
+        default: '10.0.0.1'
         type: string
 env:
   OWRT_TARGET: ${{ inputs.target }}
