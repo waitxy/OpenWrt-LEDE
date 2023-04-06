@@ -2,8 +2,6 @@
 
 #luci-app-store
 git clone --depth=1 --single-branch https://github.com/luochongjun/istore.git
-#Alist
-git clone --depth=1 --single-branch https://github.com/sbwml/luci-app-alist.git
 #Design Theme
 git clone --depth=1 --single-branch https://github.com/gngpp/luci-theme-design.git
 #Design Config
