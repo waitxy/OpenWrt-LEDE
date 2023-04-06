@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#luci-app-filebrowser
-git clone --depth=1 --single-branch https://gitee.com/mu_xin/luci-app-filebrowser.git
 #Design Theme
 git clone --depth=1 --single-branch https://github.com/gngpp/luci-theme-design.git
 #Design Config
