@@ -10,3 +10,6 @@ sed -i "s/192.168.1.1/$OWRT_IP/g" ./package/base-files/files/bin/config_generate
 sed -i 's/luci-theme-bootstrap/luci-theme-design/g' ./feeds/luci/collections/luci/Makefile
 #修改默认时间格式
 sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S %A")/g' $(find ./package/lean/autocore/files/ -type f -name "index.htm")
+
+# 调整 V2ray服务器 到 VPN 菜单
+sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-openclash/luasrc/controller/*.lua
