@@ -15,9 +15,6 @@ CONFIG_PACKAGE_luci-i18n-vsftpd-zh-cn=y
 CONFIG_PACKAGE_msd_lite=y
 
 CONFIG_PACKAGE_luci-app-filebrowser=y
-# MosDNS
-CONFIG_PACKAGE_luci-app-mosdns=y
-CONFIG_PACKAGE_mosdns=y
 # 流量监控
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 CONFIG_PACKAGE_wrtbwmon=y
@@ -33,9 +30,9 @@ CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-store=y
-CONFIG_PACKAGE_luci-app-ikoolproxy=y
+CONFIG_PACKAGE_luci-app-ikoolproxy=n
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
-CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-adguardhome=n
 CONFIG_PACKAGE_luci-app-alist=y
 CONFIG_PACKAGE_alist=y
 #删除插件
