@@ -1,5 +1,30 @@
 #!/bin/bash
 
+# 晶晨宝盒
+svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
+sed -i "s|https.*/OpenWrt|https://github.com/haiibo/OpenWrt|g" package/luci-app-amlogic/root/etc/config/amlogic
+sed -i "s|opt/kernel|https://github.com/ophub/kernel/tree/main/pub/stable|g" package/luci-app-amlogic/root/etc/config/amlogic
+sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
+
+# MosDNS
+svn co https://github.com/sbwml/luci-app-mosdns/trunk/luci-app-mosdns package/luci-app-mosdns
+svn co https://github.com/sbwml/luci-app-mosdns/trunk/mosdns package/mosdns
+git clone --depth 1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
+#infinityfreedom
+git clone --depth 1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
+# 流量监控
+svn co https://github.com/haiibo/packages/trunk/luci-app-wrtbwmon package/luci-app-wrtbwmon
+svn co https://github.com/haiibo/packages/trunk/wrtbwmon package/wrtbwmon
+# 在线用户
+svn co https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
+sed -i '/bin\/sh/a\uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
+sed -i '/nlbwmon/a\uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
+# Alist
+svn co https://github.com/sbwml/luci-app-alist/trunk/luci-app-alist package/luci-app-alist
+svn co https://github.com/sbwml/luci-app-alist/trunk/alist package/alist
+
+
 #luci-app-store
 git clone --depth=1 --single-branch https://github.com/linkease/istore.git
 #adguardhome
