@@ -10,6 +10,13 @@ git clone --depth=1 --single-branch https://github.com/gngpp/luci-theme-design.g
 git clone --depth=1 --single-branch https://github.com/gngpp/luci-app-design-config.git
 #Open Clash
 git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
+#ikoolproxy
+git clone --depth 1 https://github.com/iwrt/luci-app-ikoolproxy package/luci-app-ikoolproxy
+# 在线用户
+svn co https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
+sed -i '/bin\/sh/a\uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
+sed -i '/nlbwmon/a\uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
+
 
 #Open Clash Core
 export CORE_VER=https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/core_version
