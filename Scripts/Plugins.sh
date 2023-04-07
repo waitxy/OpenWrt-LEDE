@@ -18,15 +18,15 @@ svn co https://github.com/sbwml/luci-app-alist/trunk/alist package/alist
 #luci-app-store
 git clone --depth=1 --single-branch https://github.com/linkease/istore.git
 #adguardhome
-git clone --depth=1 --single-branch https://github.com/rufengsuixing/luci-app-adguardhome.git
+#git clone --depth=1 --single-branch https://github.com/rufengsuixing/luci-app-adguardhome.git
+#ikoolproxy
+#git clone --depth 1 https://github.com/iwrt/luci-app-ikoolproxy package/luci-app-ikoolproxy
 #Design Theme
 git clone --depth=1 --single-branch https://github.com/gngpp/luci-theme-design.git
 #Design Config
 git clone --depth=1 --single-branch https://github.com/gngpp/luci-app-design-config.git
 #Open Clash
 git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
-#ikoolproxy
-git clone --depth 1 https://github.com/iwrt/luci-app-ikoolproxy package/luci-app-ikoolproxy
 
 #Open Clash Core
 export CORE_VER=https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/core_version
