@@ -4,7 +4,7 @@
 #luci-app-store
 git clone --depth=1 --single-branch https://github.com/linkease/istore.git
 #adguardhome
-#git clone --depth=1 --single-branch https://github.com/rufengsuixing/luci-app-adguardhome.git
+git clone --depth=1 --single-branch https://github.com/rufengsuixing/luci-app-adguardhome.git
 #ikoolproxy
 #git clone --depth 1 https://github.com/iwrt/luci-app-ikoolproxy package/luci-app-ikoolproxy
 #Design Theme
