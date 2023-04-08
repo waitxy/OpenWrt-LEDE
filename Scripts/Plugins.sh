@@ -1,13 +1,5 @@
 #!/bin/bash
 
-svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
-#infinityfreedom
-git clone --depth 1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
-
-# Alist
-svn co https://github.com/sbwml/luci-app-alist/trunk/luci-app-alist package/luci-app-alist
-svn co https://github.com/sbwml/luci-app-alist/trunk/alist package/alist
-
 
 #luci-app-store
 git clone --depth=1 --single-branch https://github.com/linkease/istore.git
