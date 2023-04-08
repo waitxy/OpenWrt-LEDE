@@ -6,6 +6,9 @@ rm -rf $(find ./feeds/luci/ -type d -name "*design*")
 sed -i "s/OpenWrt/$OWRT_NAME/g" ./package/base-files/files/bin/config_generate
 #修改默认IP地址
 sed -i "s/192.168.1.1/$OWRT_IP/g" ./package/base-files/files/bin/config_generate
+#修改默认WAN口为eth0
+sed -i 's/local lan_if="$1"/local lan_if="$2"/g' ./package/base-files/files/lib/functions/uci-defaults.sh
+sed -i 's/local wan_if="$2"/local wan_if="$1"/g' ./package/base-files/files/lib/functions/uci-defaults.sh
 #修改默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-design/g' ./feeds/luci/collections/luci/Makefile
 #修改默认时间格式
