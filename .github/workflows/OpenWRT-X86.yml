@@ -2,7 +2,7 @@ name: OpenWRT-X86  #CI项目名
 
 on:
   schedule:  #自动编译：周五2:30执行
-    - cron: 30 2 * * FRI
+    - cron: 30 2 * * SAT
   workflow_dispatch:  #手动编译
 
 env:
