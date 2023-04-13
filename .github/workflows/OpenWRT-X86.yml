@@ -86,7 +86,10 @@ jobs:
           cat $GITHUB_WORKSPACE/Config/$OWRT_TARGET.txt $GITHUB_WORKSPACE/Config/General.txt >> .config
 
           make defconfig
-
+      - name: Cleanup Toolchain
+        run: |
+          cd ./lede
+          make clean
       - name: 下载软件包
         run: |
           cd ./lede
@@ -98,13 +101,10 @@ jobs:
           cd ./lede
 
           make -j$(nproc) || make -j1 V=s
-
           echo "======================="
           df -h
           echo "======================="
-          du -h --max-depth=1 ./build_dir
-          echo "======================="
-          du -h --max-depth=1 ./bin
+          du -h --max-depth=1
           echo "======================="
 
       - name: 打包固件
